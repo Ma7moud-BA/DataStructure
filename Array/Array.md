@@ -14,3 +14,8 @@ arr[5]=arr[4]
 arr[4]=arr[3]
 arr[3]=arr[2]
 so loop list[i]=list[i-1]
+
+## Array advantages and disadvantages
+
+- adv: fixed access time :O(1)
+- dis: fixed size, sequential, bad removal, bad insertion, space wastage.
