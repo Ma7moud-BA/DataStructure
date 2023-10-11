@@ -51,6 +51,14 @@ it the desired number is at the start of the array this is called the `best case
 
 ### worst case : big O Notation `O`
 
+### Big O Notation:
+
+Big O notation is a mathematical notation that describes the limiting behavior of a function when the argument tends towards a particular value r infinity.
+
+### What this has to do with data structures
+
+Certain operation can be more or less costly depending on what data structure we use, for example accessing an array element by its index is super fast but arrays have a fixed length and if you want to constantly add or remove items from them they have to get get resized and this will get costly as the size of our input grows very large, so we use something called linked list this type of data structure can grow or shrink very quickly but accessing a linked list element by its index is slow so that's why we need you learn about the big O notation first before we can talk about various data structures
+
 always aim to find the worst case to solve it
 
 `ex.`
@@ -85,6 +93,7 @@ best to worst
 - O(n<sup>2</sup>)
 - O(2<sup>n</sup>)
 - O(n!)
+- ![Alt text](image.png)
 
 ex.
 
@@ -248,3 +257,35 @@ for(int i=0;i<n;i++){
 ```
 
 complexity= n \* fun complexity
+
+ex.
+
+```java
+public void log(int[] numbers,String[] names){
+    for(int number:numbers){ //O(n)
+        System.out.println(number);
+    }
+    for(String  name :names){ //O(m)
+        System.out.println(number);
+    }
+}
+```
+
+complexity=O(n+m)=O(n) because the run time of this method increases linearly
+
+ex.
+
+```java
+public void log(int[] numbers,){
+    for(int number:numbers){ //O(n)
+        System.out.println(number);
+    }
+    for( int first  :numbers){ //O(n)
+        for(int  second :numbers){ //O(n)
+                System.out.println(first +","+second);
+    }
+    }
+}
+```
+
+complexity=O(n+n<sup>2</sup>)=O(n<sup>2</sup>) because the run time of this method increases massively with n<sup>2</sup>
